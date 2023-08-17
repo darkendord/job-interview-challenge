@@ -1,6 +1,9 @@
 "use strict";
 
-window.onscroll = function() {myFunction()};
+window.onload = function() {
+ stickyFunction()
+};
+window.onscroll = function() {stickyFunction()};
 
 const navbar = document.getElementById("navbar");
 const hamburgerIcon = document.getElementById("hamburger-icon");
@@ -10,7 +13,7 @@ const overlay = document.getElementById("overlay");
 
 const sticky = navbar.offsetTop;
 
-function myFunction() {
+function stickyFunction() {
   if (window.scrollY >= sticky) {
     navbar.classList.add("sticky")
   } else {
